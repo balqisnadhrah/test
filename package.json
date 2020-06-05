@@ -1,0 +1,18 @@
+{
+  "name": "fyptest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "geth": "^0.4.0",
+    "jquery": "^3.5.0",
+    "sha256": "^0.2.0",
+    "truffle": "^5.1.23",
+    "web3": "^1.2.7"
+  }
+}
