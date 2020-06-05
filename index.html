@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Tenancy Deposit DApp</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/jpg" href="images/favicon-16x16.jpg" sizes="16x16" />
+	<link rel="stylesheet" type="text/css" href="css/tenancy-deposit.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/boot.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/ui.css"/>
+	<link rel="stylesheet" type="text/css" href="css/media.css"/>
+	<link rel="stylesheet" type="text/css" href="css/popup.css"/>
+	<link rel="stylesheet" type="text/css" href="css/owl.css"/>
+	<link rel="stylesheet" type="text/css" href="css/owl2.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bar.css"/>
+
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <!--<script src="lib/sha256.min.js"></script>-->
+    <script src="tenancy-deposit.js"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+</head>
+
+<body>
+<header id="menu">
+    <a href="#" id="linkHome">Home</a>
+    
+    <a href="#" id="linkContractDetails">Contract Details</a>
+    <a href="#" id="linkLandlord">Landlord</a>
+	<a href="#" id="linkTenant">Tenant</a>
+	<a href="#" id="linkContractAdd">About</a>
+   <!-- <a href="#" id="linkArbiter">Arbiter</a>-->
+</header>
+
+<main>
+    <section id="loadingBox">Loading ...</section>
+
+    <section id="infoBox">
+        <header>x</header>
+        <p>Info</p></section>
+
+    <section id="errorBox">
+        <header>x</header>
+        <p>Error</p></section>
+
+    <section id="viewHome">
+		<h1> HOUSE FOR RENT </h1> 
+		<div class="site-section site-section-sm bg-light">
+			<div class="container">
+			
+			  <div class="row mb-5">
+				<div class="col-md-6 col-lg-4 mb-4">
+				  <div class="property-entry h-100">
+					<!--<a href="property-details.html" class="property-thumbnail">-->
+					  <div class="offer-type-wrap">
+						<!-- hello <span class="offer-type bg-danger">Sale</span> -->
+						<span class="offer-type bg-success">Rent</span>
+					  </div>
+					  <img src="image/image1.jpg" alt="Image" class="img-fluid">
+					</a>
+					<div class="p-4 property-body">
+					  <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+					  <h2 class="property-title"><a href="property-details.html">Mayang Sari</a></h2>
+					  <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>40000 shah alam </span>
+					  <strong class="property-price text-primary mb-3 d-block text-success">RM 2500</strong>
+					  <p class="contact">Contact: 0186778796</p>
+					  <ul class="property-specs-wrap mb-3 mb-lg-0">
+						<li>
+							<span class="property-specs">Beds</span>
+							<span class="property-specs-number">2 <sup>+</sup></span>
+							
+						  </li>
+						<li>
+						  <span class="property-specs">Baths</span>
+						  <span class="property-specs-number">2</span>
+						  
+						</li>
+						<li>
+							<span class="property-specs">SQ FT</span>
+						  <span class="property-specs-number">7,000</span>
+						  
+						</li>
+					  </ul>
+	  
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="property-entry h-100">
+					  <!--<a href="property-details.html" class="property-thumbnail">-->
+						<div class="offer-type-wrap">
+						  <!-- hello <span class="offer-type bg-danger">Sale</span> -->
+						  <span class="offer-type bg-success">Rent</span>
+						</div>
+						<img src="image/image2.jpg" alt="Image" class="img-fluid">
+					  </a>
+					  <div class="p-4 property-body">
+						<a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+						<h2 class="property-title"><a href="property-details.html">Acapella</a></h2>
+						<span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>Seksyen 13, 40000 Shah Alam</span>
+						<strong class="property-price text-primary mb-3 d-block text-success">RM 2000</strong>
+						<p class="contact">Contact: 0122536365</p>
+						<ul class="property-specs-wrap mb-3 mb-lg-0">
+						  
+							<li>
+								<span class="property-specs">Beds</span>
+								<span class="property-specs-number">2 <sup>+</sup></span>
+								
+							</li>
+						  
+						  <li>
+							<span class="property-specs">Baths</span>
+							<span class="property-specs-number">2</span>
+							
+						  </li>
+						  <li>
+							<span class="property-specs">SQ FT</span>
+							<span class="property-specs-number">7,000</span>
+							
+						  </li>
+						</ul>
+		
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-md-6 col-lg-4 mb-4">
+					<div class="property-entry h-100">
+					  <a href="property-details.html" class="property-thumbnail">
+						<div class="offer-type-wrap">
+						  <!-- hello <span class="offer-type bg-danger">Sale</span> -->
+						  <span class="offer-type bg-success">Rent</span>
+						</div>
+						<img src="image/image3.jpg" alt="Image" class="img-fluid">
+					  </a>
+					  <div class="p-4 property-body">
+						<a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+						<h2 class="property-title"><a href="property-details.html">PKNS</a></h2>
+						<span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 40150 Shah Alam</span>
+						<strong class="property-price text-primary mb-3 d-block text-success">RM 1000</strong>
+						<p class="contact">Contact: 0111234556</p>
+						<ul class="property-specs-wrap mb-3 mb-lg-0">
+						  
+							<li>
+								<span class="property-specs">Beds</span>
+								<span class="property-specs-number">2 <sup>+</sup></span>
+								
+							  </li>
+							
+						  
+						  <li>
+							<span class="property-specs">Baths</span>
+							<span class="property-specs-number">2</span>
+							
+						  </li>
+						  <li>
+							<span class="property-specs">SQ FT</span>
+							<span class="property-specs-number">1,000</span>
+							
+						  </li>
+						</ul>
+		
+					  </div>
+					</div>
+				  </div>
+					<div class="row mb-5">
+						<div class="col-md-6 col-lg-4 mb-4">
+						  <div class="property-entry h-100">
+							<!--<a href="property-details.html" class="property-thumbnail">-->
+							  <div class="offer-type-wrap">
+								<!-- hello <span class="offer-type bg-danger">Sale</span> -->
+								<span class="offer-type bg-success">Rent</span>
+							  </div>
+							  <img src="image/image3.jpg" alt="Image" class="img-fluid">
+							</a>
+							<div class="p-4 property-body">
+							  <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+							  <h2 class="property-title"><a href="property-details.html">TTDI</a></h2>
+							  <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>60000 Kuala Lumpur </span>
+							  <strong class="property-price text-primary mb-3 d-block text-success">RM 1000</strong>
+							  <p class="contact">Contact: 0133037996</p>
+							  <ul class="property-specs-wrap mb-3 mb-lg-0">
+								
+								<li>
+									<span class="property-specs">Beds</span>
+									<span class="property-specs-number">2 <sup>+</sup></span>
+									
+								  </li>
+								<li>
+								  <span class="property-specs">Baths</span>
+								  <span class="property-specs-number">2</span>
+								  
+								</li>
+								<li>
+									<span class="property-specs">SQ FT</span>
+								  <span class="property-specs-number">1,000</span>
+								  
+								</li>
+							  </ul>
+			  
+							</div>
+						  </div>
+						</div>
+
+				<div class="col-md-6 col-lg-4 mb-4">
+				  <div class="property-entry h-100">
+					<!--<a href="property-details.html" class="property-thumbnail">-->
+					  <div class="offer-type-wrap">
+					   <!-- hello  <span class="offer-type bg-danger">Sale</span> -->
+						<span class="offer-type bg-success">Rent</span>
+					  </div>
+					  <img src="image/image1.jpg" alt="Image" class="img-fluid">
+					</a>
+					<div class="p-4 property-body">
+					  <a href="#" class="property-favorite active"><span class="icon-heart-o"></span></a>
+					  <h2 class="property-title"><a href="property-details.html">Mayang Sutera</a></h2>
+					  <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 40150 Shah Alam, Selangor</span>
+					  <strong class="property-price text-primary mb-3 d-block text-success">RM 2000 </strong>
+					  <p class="contact">Contact: 0122323456</p>
+					  <ul class="property-specs-wrap mb-3 mb-lg-0">
+						<li>
+							<span class="property-specs">Beds</span>
+							<span class="property-specs-number">2 <sup>+</sup></span>
+							
+						  </li>
+						<li>
+						  <span class="property-specs">Baths</span>
+						  <span class="property-specs-number">2</span>
+						  
+						</li>
+						<li>
+						  <span class="property-specs">SQ FT</span>
+						  <span class="property-specs-number">7,000</span>
+						
+						</li>
+					  </ul>
+	  
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-6 col-lg-4 mb-4">
+					<div class="property-entry h-100">
+					  <a href="property-details.html" class="property-thumbnail">
+						<div class="offer-type-wrap">
+						  <!-- hello <span class="offer-type bg-danger">Sale</span> -->
+						  <span class="offer-type bg-success">Rent</span>
+						</div>
+						<img src="image/image2.jpg" alt="Image" class="img-fluid">
+					  </a>
+					  <div class="p-4 property-body">
+						<a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
+						<h2 class="property-title"><a href="property-details.html">Taman Sakinah</a></h2>
+						<span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 40150 Shah Alam</span>
+						<strong class="property-price text-primary mb-3 d-block text-success">RM 1700</strong>
+						<p class="contact">Contact: 0192525486</p>
+						<ul class="property-specs-wrap mb-3 mb-lg-0">
+							<li>
+								<span class="property-specs">Beds</span>
+								<span class="property-specs-number">3 <sup>+</sup></span>
+								
+							  </li>
+						  <li>
+							<span class="property-specs">Baths</span>
+							<span class="property-specs-number">2</span>
+							
+						  </li>
+						  <li>
+							<span class="property-specs">SQ FT</span>
+							<span class="property-specs-number">7,000</span>
+							
+						  </li>
+						</ul>
+		
+					  </div>
+					</div>
+				  </div>	
+			  
+			</div>
+		</div>
+    </section>
+
+    <section id="viewContractAdd">
+        <h1>About</h1>
+        <p>Welcome to HomeLand.</p>
+        <p>This distributed app runs on the Etherereum blockchain network and
+            holds a tenancy deposit as Solidity smart contract.</p>
+        <ul>
+            <li><strong>Tenancy Deposit Solidity Contract</strong>:
+                <ul>
+					<li>You can start by choosing house, and then leave a message that you want to rent a house (which house, Your Name, Your IC Num, and the duration).</li>
+                    <li>Landlord will create contract by filling the deposit tenant need to pay.</li>
+					<li>Tenant then will pay the deposit using Ethereum.</li>
+					<li>When the contract ended, landlord can terminate the contract.</li>
+						
+                   <!-- <li>keeps tenant's deposit separately from landlord's one during the renting
+                        period</li>
+                    <li>if the tenant caused any damages to the property during the renting
+                        period, the Solidity contract deducts the compensation for them from the initially
+                        paid deposit and transfers it to landlord's account (on landlord's request for withdrawal)</li>
+                    <li>reimburses the tenant with the deposit (or the remaining deposit
+                        after deduction for damages) after the end of the tenancy contract</li>-->
+                </ul>
+            </li>
+            <li><strong>Landlord</strong> could:
+                <ul>
+					<li>create a new tenancy contract</li>
+					<li>Terminate contract</li>
+                    <!--<li>submit a deduction claim</li>
+                    <li>withdraw a deduction, which is either approved by the tenant or ruled by the arbiter in favour
+                        of the landlord after resolving a dispute
+                    </li>-->
+                </ul>
+            </li>
+            <li><strong>Tenant</strong> could:
+                <ul>
+					<li>sign a tenancy contract thus paying the deposit amount</li>
+					<li>Terminate contract</li>
+                    <!--<li>submit a deduction claim (in order to agree with or object to landlord's deduction claim)</li>
+                    <li>withdraw the paid deposit or eventually (deposit - deduction), which deduction is either agreed
+                        with the landlord or the arbiter resolves a dispute in favour of the landlord and rules given
+                        deduction amount
+                    </li>-->
+                </ul>
+            </li>
+            <!--<li><strong>Arbiter</strong> could:
+                <ul>
+                    <li>rule a deduction amount in favour of the landlord in case of a dispute</li>
+                </ul>
+            </li>-->
+		</ul>
+    </section>
+
+    <section id="viewContractDetails">
+        <h1>Tenancy Deposit Agreement</h1>
+        <!-- buttons -->
+        <label for="contract-landlordAddress">Landlord Address: </label>
+        <input type="text" name="contract-landlordAddress" id="contract-landlordAddress" class="contractAddress"  size="40"><br>
+        <label for="contract-tenantAddress">Tenant Address: </label>
+        <input type="text" name="contract-tenantAddress" id="contract-tenantAddress" size="40"><br>
+        <!--<label for="contract-arbiterAddress">Arbiter Address: </label>
+        <input type="text" name="contract-arbiterAddress" id="contract-arbiterAddress" size="40"><br>-->
+        <label for="contract-deposit">Deposit: </label>
+        <input type="number" name="contract-deposit" id="contract-deposit" size="20"><br>
+       	<!--<label for="contract-balance">Balance: </label>
+        <input type="number" name="contract-balance" id="contract-balance" size="20" disabled><br>
+        <label for="contract-deduction">Deduction: </label>
+        <input type="number" name="contract-deduction" id="contract-deduction" size="20" disabled><br>-->
+        <label for="contract-status">Status: </label>
+        <input type="text" name="contract-status" id="contract-status" value="N/A" size="20" disabled><br>
+        <label for="contract-ropstenTestNet">Ropsten Test Net</label>
+        <input type="checkbox" name="contract-ropstenTestNet" id="contract-ropstenTestNet" value="contract-ropstenTestNet"><br>
+        <!-- buttons -->
+        <input type="button" id="documentCreateTenancyDepositContract" value="Create Contract"/>
+        <input type="button" id="documentResetTenancyDepositContract" value="Reset" />
+        <p>
+            <em>Please note that only a <strong>Landlord</strong> could create tenancy deposit agreements.</em>
+        </p>
+        <p>
+            <!--<strong>Tenancy Deposit Solidity Contract</strong>:
+            <ul>
+                <li>keeps tenant's deposit separately from landlord's one during the renting
+                    period</li>
+                <li>if the tenant caused any damages to the property during the renting
+                    period, the Solidity contract deducts the compensation for them from the initially
+                    paid deposit and transfers it to landlord's account (on landlord's request for withdrawal)</li>
+                <li>reimburses the tenant with the deposit (or the remaining deposit
+                    after deduction for damages) after the end of the tenancy contract</li>
+            </ul>-->
+        </p>
+    </section>
+
+    <section id="viewLandlord">
+        <h1>Landlord</h1>
+        <strong>Tenancy Deposit Agreement</strong><br>
+        <!-- fields -->
+        <label for="landlord-landlordAddress">Landlord Address: </label>
+        <input type="text" name="landlord-landlordAddress" id="landlord-landlordAddress" size="40" disabled><br>
+        <label for="landlord-tenantAddress">Tenant Address: </label>
+        <input type="text" name="landlord-tenantAddress" id="landlord-tenantAddress" size="40" disabled><br>
+        <!--<label for="landlord-arbiterAddress">Arbiter Address: </label>
+        <input type="text" name="landlord-arbiterAddress" id="landlord-arbiterAddress" size="40" disabled><br>-->
+        <label for="landlord-deposit">Deposit: </label>
+        <input type="number" name="landlord-deposit" id="landlord-deposit" size="20" disabled><br>
+        <!--<label for="landlord-balance">Balance: </label>
+        <input type="number" name="landlord-balance" id="landlord-balance" size="20" disabled><br>
+        <label for="landlord-deduction">Deduction: </label>
+        <input type="number" name="landlord-deduction" id="landlord-deduction" size="20" disabled><br>-->
+        <label for="landlord-status">Status: </label>
+        <input type="text" name="landlord-status" id="landlord-status" value="N/A" size="20" disabled><br>
+        <!-- buttons -->
+        <input type="submit" id="documentLandlordTerminateContract" value="Terminate Contract" disabled/>
+        <!--<input type="submit" id="documentLandlordClaimDeduction" value="Claim Deduction" disabled/>
+        <input type="submit" id="documentLandlordWithdrawDeduction" value="Withdraw Deduction" disabled/>-->
+        <p>
+            <strong>Landlord</strong> could:
+            <ul>
+                <li>create a new tenancy contract</li>
+                <!--<li>submit a deduction claim</li>
+                <li>withdraw a deduction, which is either approved by the tenant or ruled by the arbiter in favour
+                    of the landlord after resolving a dispute
+                </li>-->
+            </ul>
+        </p>
+    </section>
+
+    <section id="viewTenant">
+        <h1>Tenant</h1>
+        <strong>Tenancy Deposit Agreement</strong><br>
+        <!-- fields -->
+        <label for="tenant-landlordAddress">Landlord Address: </label>
+        <input type="text" name="tenant-landlordAddress" id="tenant-landlordAddress" size="40" disabled><br>
+        <label for="tenant-tenantAddress">Tenant Address: </label>
+        <input type="text" name="tenant-tenantAddress" id="tenant-tenantAddress" size="40" disabled><br>
+        <!--<label for="tenant-arbiterAddress">Arbiter Address: </label>
+        <input type="text" name="tenant-arbiterAddress" id="tenant-arbiterAddress" size="40" disabled><br>-->
+        <label for="tenant-deposit">Deposit: </label>
+        <input type="number" name="tenant-deposit" id="tenant-deposit" size="20" disabled><br>
+        <!--<label for="tenant-balance">Balance: </label>
+        <input type="number" name="tenant-balance" id="tenant-balance" size="20" disabled><br>
+        <label for="tenant-deduction">Deduction: </label>
+        <input type="number" name="tenant-deduction" id="tenant-deduction" size="20" disabled><br>-->
+        <label for="tenant-status">Status: </label>
+        <input type="text" name="tenant-status" id="tenant-status" value="N/A" size="20" disabled><br>
+        <!-- buttons -->
+        <input type="submit" id="documentTenantSignContract" value="Sign Contract" disabled/>
+        <input type="submit" id="documentTenantTerminateContract" value="Terminate Contract" disabled/>
+        <!--<input type="submit" id="documentTenantClaimDeduction" value="Claim Deduction" disabled/>
+        <input type="submit" id="documentTenantWithdrawDeposit" value="Withdraw Deposit" disabled/>-->
+        <p>
+            <strong>Tenant</strong> could:
+            <ul>
+                <li>sign a tenancy contract thus paying the deposit amount</li>
+               <!-- <li>submit a deduction claim (in order to agree with or object to landlord's deduction claim</li>
+                <li>withdraw the paid deposit or eventually (deposit - deduction), which deduction is either agreed
+                    with the landlord or the arbiter resolves a dispute in favour of the landlord and rules given
+                    deduction amount
+                </li>-->
+            </ul>
+        </p>
+    </section>
+
+    <!--<section id="viewArbiter">
+        <h1>Arbiter</h1>
+        <strong>Tenancy Deposit Agreement</strong><br>
+        <!-- fields 
+        <label for="arbiter-landlordAddress">Landlord Address: </label>
+        <input type="text" name="arbiter-landlordAddress" id="arbiter-landlordAddress" size="40" disabled><br>
+        <label for="arbiter-tenantAddress">Tenant Address: </label>
+        <input type="text" name="arbiter-tenantAddress" id="arbiter-tenantAddress" size="40" disabled><br>
+        <label for="arbiter-arbiterAddress">Arbiter Address: </label>
+        <input type="text" name="arbiter-arbiterAddress" id="arbiter-arbiterAddress" size="40" disabled><br>
+        <label for="arbiter-deposit">Deposit: </label>
+        <input type="number" name="arbiter-deposit" id="arbiter-deposit" size="20" disabled><br>
+        <label for="arbiter-balance">Balance: </label>
+        <input type="number" name="arbiter-balance" id="arbiter-balance" size="20" disabled><br>
+        <label for="arbiter-deduction">Deduction: </label>
+        <input type="number" name="arbiter-deduction" id="arbiter-deduction" size="20" disabled><br>
+        <label for="arbiter-status">Status: </label>
+        <input type="text" name="arbiter-status" id="arbiter-status" value="N/A" size="20" disabled><br>
+        <!-- buttons -->
+       <!-- <input type="submit" id="documentArbiterResolveDispute" value="Resolve Dispute" disabled/>
+        <input type="button" id="documentClaimTenantDeduction" value="Submit"/><br>-->
+        <!--<input type="button" id="documentWithdrawDeduction" value="Submit"/>-->
+        <p>
+            <!--<strong>Arbiter</strong> could:
+            <ul>
+                <li>rule a deduction amount in favour of the landlord in case of a dispute</li>
+            </ul>-->
+        </p>
+    </section>
+</main>
+<!--
+<script>
+    if(typeof web3 !== 'undefined'){
+     web3 = new Web3(web3.currentProvider);
+    }
+    else{
+     web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+    }
+
+    web3.eth.defaultAccount = web3.eth.accounts[0];
+
+    var helloContract = web3.eth.contract(
+	[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_contractAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "BalanceChanged",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_contractAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "MoneyWithdrawn",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "signContract",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_contractAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "statusIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "StatusChanged",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_tenant",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_expectedDeposit",
+				"type": "uint256"
+			}
+		],
+		"name": "tenancyDeposit",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "terminateContract",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "withdrawTenantDeposit",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getContractBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getContractStatus",
+		"outputs": [
+			{
+				"internalType": "enum TenancyDeposit.ContractStatus",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getExpectedDeposit",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getLandlordBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getPaidDeposit",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTenantBalance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]);
+
+    var hello = helloContract.at("0x43c0EF5742fe7bE3bcC2560650B76B2cb7a49D05");
+
+    hello.getValue(function(error, result){
+     if(!error){
+         $('#value').html(result.toString());
+     }
+     else{
+         console.log(error);
+     }
+    });+
+
+    $('#button').click(function(){
+         hello.setValue($('#input').val());
+    });
+
+ </script>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>-->
+
+<footer> HOMELAND <BR>&quot;HOME SHOULD BE AN ANCHOR, A PORT IN A STORM, A REFUGE, A HAPPY PLACE IN WHICH TO DWELL, A PLACE WHERE WE ARE LOVED AND WHERE WE CAN LOVE&quot;- MARVIN J.ASHTON</footer>
+</body>
+</html>
